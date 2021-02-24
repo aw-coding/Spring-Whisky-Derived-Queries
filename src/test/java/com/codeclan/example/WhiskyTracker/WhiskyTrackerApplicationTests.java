@@ -41,10 +41,16 @@ public class WhiskyTrackerApplicationTests {
 
 	}
 
-	@Test
+	@Test		//uses distillery id
 	public void canFindWhiskiesByDistillery_idAndAge(){
 		List<Whisky> answer = whiskyRepository.findWhiskyByDistillery_idAndAge(5L, 16);
 		assertEquals("Twist Tattoo", answer.get(0).getName());
 	}
+
+//	@Test
+//	public void canFindWhiskiesByDistilleryNameAndAge(){
+//		List<Whisky> answer = whiskyRepository.findWhiskyByDistillery_idAndAge("Highland Park", 16);
+//		assertEquals("Twist Tattoo", answer.get(0).getName());
+//	}
 
 }
